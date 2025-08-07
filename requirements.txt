@@ -1,0 +1,6 @@
+weasyprint
+jinja2
+pandas
+reportlab
+pdfkit
+wkhtmltopdf
