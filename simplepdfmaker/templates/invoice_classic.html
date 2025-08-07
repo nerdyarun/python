@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('custom_font.otf') format('truetype'); /* Fixed path */
+        }
+        body {
+            font-family: 'CustomFont', Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Invoice</h1>
+
+    <p><strong>Invoice #: </strong> {{ invoice_number }}</p>
+    <p><strong>Date: </strong> {{ date }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.get('item', 'N/A') }}</td>
+                <td>{{ item.get('quantity', 0) }}</td>
+                <td>{{ item.get('price', 0) }}</td>
+                <td>{{ item.get('quantity', 0) * item.get('price', 0) }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

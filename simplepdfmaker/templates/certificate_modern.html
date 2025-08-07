@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate of Achievement</title>
+  <style>
+    body {
+      background: #e0e0e0;
+      font-family: 'Helvetica Neue', sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    .certificate {
+      background: white;
+      padding: 60px 40px;
+      margin: auto;
+      width: 70%;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    }
+    .certificate h1 {
+      font-size: 42px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .certificate h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      color: #666;
+    }
+    .recipient {
+      font-size: 34px;
+      color: #0d47a1;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .course {
+      font-size: 24px;
+      color: #424242;
+      margin: 20px 0;
+    }
+    .date {
+      margin-top: 50px;
+      font-size: 18px;
+      color: #888;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>Certificate of Achievement</h1>
+    <h2>This certificate is proudly presented to</h2>
+    <div class="recipient">{{ name }}</div>
+    <p>for completing the</p>
+    <div class="course">"{{ course_name }}"</div>
+    <div class="date">Awarded on: {{ completion_date }}</div>
+    <div class="footer">Presented by SimplePDFMaker Academy</div>
+  </div>
+</body>
+</html>

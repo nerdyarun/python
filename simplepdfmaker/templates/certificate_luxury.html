@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate of Excellence</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      font-family: 'Times New Roman', serif;
+      color: #d4af37;
+      text-align: center;
+      padding: 50px;
+    }
+    .certificate {
+      background: #0d0d0d;
+      border: 5px solid #d4af37;
+      padding: 60px;
+      width: 75%;
+      margin: auto;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    }
+    .certificate h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #d4af37;
+    }
+    .certificate h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #d4af37;
+    }
+    .recipient {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 30px 0;
+      color: #ffffff;
+    }
+    .course {
+      font-size: 28px;
+      font-style: italic;
+      margin: 20px 0;
+      color: #cccccc;
+    }
+    .date {
+      margin-top: 50px;
+      font-size: 20px;
+      color: #aaaaaa;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #888888;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>Certificate of Excellence</h1>
+    <h2>Presented to</h2>
+    <div class="recipient">{{ name }}</div>
+    <p>for outstanding performance in</p>
+    <div class="course">"{{ course_name }}"</div>
+    <div class="date">Date: {{ completion_date }}</div>
+    <div class="footer">SimplePDFMaker Global Certification</div>
+  </div>
+</body>
+</html>

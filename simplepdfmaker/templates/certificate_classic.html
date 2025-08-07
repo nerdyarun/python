@@ -1,1 +1,72 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate of Completion</title>
+  <style>
+    body {
+      background: #f2f2f2;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .certificate {
+      background: white;
+      border: 10px solid #d4af37;
+      padding: 50px;
+      width: 80%;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .certificate h1 {
+      font-size: 50px;
+      color: #0e1e40;
+      margin-bottom: 0;
+    }
+    .certificate h2 {
+      font-size: 28px;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .certificate p {
+      font-size: 22px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .recipient {
+      font-size: 35px;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #222;
+    }
+    .course {
+      font-size: 26px;
+      font-style: italic;
+      color: #333;
+      margin: 20px 0;
+    }
+    .date {
+      margin-top: 50px;
+      font-size: 20px;
+      color: #777;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>Certificate of Completion</h1>
+    <h2>This is to proudly certify that</h2>
+    <div class="recipient">{{ name }}</div>
+    <p>has successfully completed the course</p>
+    <div class="course">"{{ course_name }}"</div>
+    <p>We congratulate you on your achievement!</p>
+    <div class="date">Dated: {{ completion_date }}</div>
+    <div class="footer">Certified by SimplePDFMaker Academy</div>
+  </div>
+</body>
+</html>
